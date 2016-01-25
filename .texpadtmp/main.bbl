@@ -1,0 +1,34 @@
+\begin{thebibliography}{1}
+
+\bibitem{etter:prediction}
+V.~Etter, M.~Kafsi, E.~Kazemi, M.~Grossglauser, and P.~Thiran.
+\newblock {Where to go from here? Mobility prediction from instantaneous
+  information}.
+\newblock {\em Pervasive and Mobile Computing}, July 2013.
+
+\bibitem{Gambs:2011:SMY:2019316.2019320}
+S.~Gambs, M.-O. Killijian, and M.~N\'{u}\`{o}ez~del Prado~Cortez.
+\newblock Show me how you move and i will tell you who you are.
+\newblock {\em Trans. Data Privacy}, 4(2):103--126, Aug. 2011.
+
+\bibitem{journals/eswa/LeeL12}
+S.~Lee and K.~C. Lee.
+\newblock Context-prediction performance by a dynamic bayesian network:
+  Emphasis on location prediction in ubiquitous decision support environment.
+\newblock {\em Expert Syst. Appl.}, 39(5):4908--4914, 2012.
+
+\bibitem{conf/europar/PetzoldBTU06}
+J.~Petzold, F.~Bagci, W.~Trumler, and T.~Ungerer.
+\newblock Comparison of different methods for next location prediction.
+\newblock In W.~E. Nagel, W.~V. Walter, and W.~Lehner, editors, {\em Euro-Par},
+  volume 4128 of {\em Lecture Notes in Computer Science}, pages 909--918.
+  Springer, 2006.
+
+\bibitem{Zheng:2008:UMB:1409635.1409677}
+Y.~Zheng, Q.~Li, Y.~Chen, X.~Xie, and W.-Y. Ma.
+\newblock Understanding mobility based on gps data.
+\newblock In {\em Proceedings of the 10th International Conference on
+  Ubiquitous Computing}, UbiComp '08, pages 312--321, New York, NY, USA, 2008.
+  ACM.
+
+\end{thebibliography}

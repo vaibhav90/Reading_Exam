@@ -1,0 +1,45 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{hyperref}			% Hyperlink
+\usepackage[top=2.5cm,bottom=2.5cm,right=2.5cm,left=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{setspace}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+\begin{document}
+\pagestyle{fancy}
+
+\title{Reading Exam}
+\author{Vaibhav Kulkarni}
+\date{June 6th 2016}
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+
+\fancyhead[C]{}
+\fancyhead[L]{Reading exam}
+\fancyhead[R]{Privacy Aware Mobility prediction} 
+\fancyfoot[L]{Vaibhav Kulkarni}
+\fancyfoot[C]{} 
+\fancyfoot[R]{Page \thepage~of~\pageref{LastPage}} 
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+\setstretch{0.95}
+\input{motivation}
+\input{lect1}
+\input{lect2}
+\input{lect3}
+\input{lect4}
+\input{lect5}
+
+\newpage
+\bibliographystyle{abbrv}
+\bibliography{biblio}
+
+\end{document}
+

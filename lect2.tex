@@ -1,0 +1,62 @@
+\newpage
+\section{Comparison of Different Methods for Next Location Prediction \cite{conf/europar/PetzoldBTU06}} \label{lect2}
+
+\subsection{Summary} \label{lect2-sum}
+
+\subsubsection{Context}
+
+An important number of prediction techniques have been implemented in order to predict the future locations of users based on their previous locations. Location prediction can be very useful in everyday life: in a smart building, it can be used to prepare a room where a user may enter. In research literature, several prediction methods have been described, such as Bayesian networks, neural networks, as well as Markov chains.
+
+\subsubsection{Problem}
+
+Generally, people have some habits but they can also modify them suddenly or irregularly. In addition, when a specific event occurs, their daily movements can be entirely transformed. Prediction methods must take into account such potential changes. Consequently, prediction methods have to exhibit properties such as high prediction accuracy, short training time, as well as appropriate relearning time if changes occur. Therefore, it seems interesting and useful to compare and evaluate various prediction methods according several selected criteria in order to highlight the strengths and weaknesses of each method.
+
+\subsubsection{Contributions}
+
+\paragraph{Results}
+The main contribution of this paper is its comparison of five prediction techniques on the basis of several selected criteria. The selected five prediction techniques are: dynamic Bayesian network, multi-layer perceptron (neural network), Elman net (neural network), Markov predictor, as well as state predictor. In addition, optimized versions of the Markov and state predictor with a confidence counter are added to these selected techniques. In order to compare these techniques, ten criteria were chosen: 
+
+\begin{itemize}
+
+\item \emph{Prediction accuracy} is the number of correct predictions divided by the number of deliverable predictions (deliverable predictions are those that provide a result, because some techniques cannot provide a result if current pattern occurs the first time);
+
+\item \emph{Quantity} is the number of deliverable predictions divided by the number of requested predictions;
+
+\item \emph{Stability} is the difference between the minimum and the maximum of the prediction accuracies reached with different parameters related to the prediction method such as time;
+
+\item \emph{Learning} is the time taken between the beginning of the training phase of a network or a model and when it can be effectively used;
+
+\item \emph{Relearning} is the time taken to learn a new habit;
+
+\item \emph{Memory cost} is the minimal number of bits to store the current state of the technique;
+
+\item \emph{Computing cost} can be a table look-up, a specific training or another cost;
+
+\item \emph{Modelling effort} is the effort made to find variables, parameters and other elements in order to obtain a model or a network;
+
+\item \emph{Expendability} indicates if it is possible to use the network or the model with more locations;
+
+\item \emph{Time prediction} highlights if the time prediction is integrated or in parallel.
+
+\end{itemize}
+
+The results obtained show that the most accurate techniques (state predictor followed by Markov predictor) are the ones including the confidence counter. However, if the confidence counter is not taken into account, the most accurate technique is the Elman net. Furthermore, the state predictor is the fastest relearning method. Finally, the results also indicate that it is impossible to highlight a 'one size fits all' technique. Indeed, persons who want to predict future locations in a specific application must define the most important criteria of this particular application and find a technique that matches these criteria.
+
+\paragraph{Approach}
+In this paper, a location prediction model is described as a function with input data (history) and output data (prediction result). The input is composed of a sequence of the past visited locations with the entry time for each of these locations, while the output is the most likely future location and its forecast entry time. For the evaluation of these five techniques, a set of benchmarks called the 'Augsburg Indoor Location Tracking Benchmarks' are used. These benchmarks contain the movements of four persons in an office building divided in two different sets (fall and summer data). The summer data set is used for training while the fall data set for computing the prediction accuracy. Furthermore, this evaluation does not take into account contextual knowledge (the personal schedule of a person for example).
+
+\subsection{Discussion} \label{lect2-disc}
+
+This comparison is a helpful guide aiming at facilitating the choice of prediction methods. Indeed, we can easily see what technique is better according to which criterion, especially as all the criteria are well described with some examples in the paper. In addition, we can talk about several limits and/or improvements.
+
+\begin{itemize}
+
+\item The choice of the five techniques is not clearly explained and motivated. The authors only indicate that their comparison is focused on the evaluation of next location methods but they do not really explain why they have chosen these methods. Are they the only existing methods?
+
+\item Some of the chosen techniques are not sufficiently detailed. Indeed, some techniques are very complex and it would have been better to describe in detail how they work and how we can implement them.
+
+\item In this paper, it is written that the best settings for each technique have not always been used during the evaluation. Consequently, this choice can promote some techniques and disadvantage the others. In addition, the real accuracy might not be properly evaluated.
+
+\item As the confidence counter seems to improve the Markov predictor and the state predictor, it could also be included in the dynamic Bayesian network method, in the multi-layer perceptron method as well as in Elman net method in order to see if we observe the same accuracy improvements.
+
+\end{itemize}

@@ -1,0 +1,38 @@
+\newpage
+\section{Where to go from here? Mobility prediction from instantaneous information \cite{etter:prediction}} \label{lect5}
+
+\subsection{Summary} \label{lect5-sum}
+
+\subsubsection{Context}
+
+The interest in studying human mobility is increasing. Currently, a lot of applications are able to collect human locations. These locations reflect people lifestyle, their tastes as well as their behaviour. Therefore, the value of these data collected is increasing. In addition, all these locations can be very useful in order to predict future locations of a human.
+
+\subsubsection{Problem}
+
+There exist an important number of location predictors. However, all of them have not the same prediction accuracy and do not necessarily take into account the frequent changes in human's life such as home or work changes. Consequently, it is obvious that an analysis must be done about these predictors in order to reveal the best performing ones and to find a way to increase this performance.
+
+\subsubsection{Contributions}
+
+\paragraph{Results}
+
+This paper examines a wide set of predictors and highlights the most accurate among them (Gradient Boosted Decision Trees with a percentage of 52.55 \%). In addition it reveals a complex blending strategy that enables to improve prediction accuracy of 4 \% compared to the most accurate predictor.
+
+\paragraph{Approach}
+
+The work focuses on comparing three families of predictors in order to predict the next place of a human with instantaneous information only. These three families are based on graphical models, neural networks and decision trees. It is also important to note that this work is the result of the participation to the Nokia mobile data challenge, which consisted in responding to the following challenge: \emph{'predict the next destination of a user given the current context, by building user-specific models that learn from their mobility history, and then applying these models to the current context to predict where the users go next'}. The mobility traces have been collected by the organizers and extracted from the smartphones of 80 users over periods of time ranging from a few weeks to almost two years. The research presented in this paper won the challenge.
+The first result consists in the comparison of several predictors including one tailored model named Dynamical Bayesian Network (DBN) and two generic algorithms called Artificial Neural Network (ANN) and Gradient Boosted Decision Trees (GBDTs). These predictors are enhanced with an aging algorithm in order to adapt them quickly if changes appear in a user's life. In addition, these methods are compared with two baseline predictors: most visited and first order Markov chain. The predictors have been trained with the two first sets of data and evaluate on the third. The results show that the most accurate predictor is GBDT with a percentage of 52.55 \%. But the two others are very close (52.12 \% for DBN and 51.43 \% for ANN). The two baseline predictors offer low accuracies (35.21 \% for the most visited and 44.37 \% for the first order Markov chain). The accuracy of each predictor varies a lot according to user data. This variation depends on the fact that the quality of each user data set is not equal nor homogeneous.
+Due to this high variability and to take advantage of it, a combination of predictors has also been created and tested using different blending strategies. Blending consists in the creation of a new predictor by combining others. More specifically, the new one should be more accurate than any of the individual ones. The second result demonstrates that an accuracy gain of 4 \% has been achieved compared to the 52.55 \% of the GBDT. These accuracies have been measured on the third set of data and validated with the fourth set that was undisclosed and revealed by the organizers of the challenge at the end in order to choose the winner. Thus, the best strategy found is the following:  the ten best predictors of each family have been selected in order to create a subset. Then, the final or new predictor is a mixture of this subset weighted by their performance on the second data set (computed during the training phase).
+
+\subsection{Discussion} \label{lect5-disc}
+
+The work of this paper is valuable because it shows the creation of a new predictor taking into account the performance of other predictors. However, this paper presents some limits and/or might take into account the following improvements:
+
+\begin{itemize}
+
+\item Although the results underscore that a blending strategy seems a good option if we want to increase the prediction accuracy, the paper do not describe in detail how we can concretely implement a blending predictor. It would have been very useful to see how to achieve this goal with the description of the algorithm (for the best strategy obviously).
+
+\item The authors chose to compare the selected predictors with the first order Markov chain predictor and obtained a low result for this predictor. However, there are other implementations or extensions of this Markov chain and it has clearly been revealed, in other research papers, that some extensions have better accuracy results (between 70 and 95 \% at most) than the simple first order Markov chain used in this paper. It would have been interesting to implement some better extensions of this Markov chain predictor in order to see which results would be obtained.
+
+\item Finally, the authors do not give any explanation concerning the choice of the 10 best predictors for the best strategy. Why have they chosen this number? Can we obtain the same accuracy result with 15 or 5 best predictors?
+
+\end{itemize}

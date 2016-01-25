@@ -1,0 +1,48 @@
+\newpage
+\section{Show Me How You Move and I Will Tell You Who You Are \cite{Gambs:2011:SMY:2019316.2019320}} \label{lect3}
+
+\subsection{Summary} \label{lect3-sum}
+
+\subsubsection{Context}
+Due to the constant increase of applications on smartphones or computers that extract and manipulate geolocated data about users, inference attacks on these geolocated data constitute a serious risk. Indeed, with this type of data and inference techniques, discovering users' behaviours become a rather easy task. For instance, based on the movements of a user, it is possible to learn where she lives, where she works as well as her social network, typically by correlating her movements with those of other users.
+
+\subsubsection{Problem}
+In order to protect geolocated data, there exist sanitization mechanisms, which add uncertainty to the data and remove sensitive aspects. A sanitization process has an impact on the power of a potential adversary (an entity that tries to infer users' information from their geolocated data) and should make its work harder. However, there exist a lot of sanitization mechanisms and it may be hard to make a relevant choice among them.
+
+\subsubsection{Contributions}
+
+\paragraph{Results}
+In order to help researchers to evaluate various sanitization mechanisms and inference attacks on geolocated data, this paper presents some results of experiments that show the impact of several inference attacks according some sanitization mechanisms. Furthermore, by using a flexible toolkit named GEPETO (GEoPrivacy Enhancing TOolkit), this work demonstrates how this tool is helpful to compare sanitization mechanisms according different inference attacks. The results of this paper highlight that the inference attacks can diverge significantly depending on the sanitization mechanisms. In other words, it shows that sanitization mechanisms do not offer equal protection of the data.
+
+\paragraph{Approach}
+In this paper, three experiments illustrate these results.
+
+\begin{itemize}
+
+\item For the first experiment, private data (coordinates) about taxi drivers in San Francisco was loaded in GEPETO in order to highlight critical Points Of Interests (POIs), such as home place or work place, of these drivers by applying a 'Begin and end location finder' heuristic inference attack on these data. For 20 to 90 taxi drivers, their home location was found precisely and checked on a map;
+
+\item In the second experiment, three clustering algorithms and the previous technique were compared according two sanitization mechanisms (sampling and perturbation). These four techniques also aim at the discovery of POIs of these taxi drivers from their geolocated data and play the role of a potential adversary. The results show that two clustering algorithms are quite resilient to sampling, while with the perturbation technique (distortion), none of the clustering algorithms performed with a precision greater than 50 \% under a distortion of magnitude 400 meters;
+
+\item Finally, the last experiment shows that the mobility Markov chain (also used like an inference attack) is a compact and reliable representation of the mobility behaviour of a user. Although this structure is relatively robust to sanitization mechanisms, some POIs with a lesser density may be loose when the sanitization mechanisms are applied on data. Indeed, the Markov chain algorithm enables to highlight transitions between POIs, found by a clustering algorithm. In addition, a probability is assigned to each transition and corresponds to the probability of moving from one state to another.
+
+\end{itemize}
+
+For these three experiments, only several sanitization mechanisms and inference attacks were implemented in GEPETO, but obviously it is possible to enrich/extend it with other techniques.
+
+\subsection{Discussion} \label{lect3-disc}
+
+This paper introduces a very helpful and flexible tool for the geolocated data privacy domain. Although GEPETO is an important tool in order to make a choice among several sanitization mechanisms, the overall results and GEPETO present some limits and/or might include the following improvements.
+
+\begin{itemize}
+
+\item Time dimension is not taken into account in the implementation of the mobility Markov chain. This addition might be a good improvement in order to increase the quality and the accuracy of the representation of the mobility behaviour of a user.
+
+\item Obviously, not all the sanitization mechanisms, known in research literature, are compared in this paper. Only sampling and perturbation mechanisms are presented, but other mechanisms exist such as aggregation, spatial cloaking, mix-zones, as well as swapping and should be implemented.
+
+\item GEPETO should allow us to combine several different sanitization mechanisms in order to see if the data is better protected.
+
+\item GEPETO could include the possibility to add additional knowledge about users (user's calendar for example) in order to create more sophisticated inference attacks and to test them with GEPETO.
+
+\item To finish, the comparison of several users models should be possible with GEPETO in the interest in discovering links between them in order to find their potential social network for example.
+
+\end{itemize}

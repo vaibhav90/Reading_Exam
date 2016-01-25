@@ -1,0 +1,46 @@
+\newpage
+\section{Context-prediction performance by a dynamic Bayesian network: Emphasis on location prediction in ubiquitous decision support environment \cite{journals/eswa/LeeL12}} \label{lect4}
+
+\subsection{Summary} \label{lect4-sum}
+
+\subsubsection{Context}
+
+The interest in context-aware devices, such as smartphones, is increasing. Since these devices have more and more interactions with their users, they are ubiquitous in our lives. These interactions have been made possible because smartphones react according to the context and because they are able to adapt to changes in context. In addition, such devices can be good at helping people in making timely decisions. For example, when a user receives an alert on her smartphone indicating that an electrical problem just occurred on a particular route of the transportation network, she can decide to leave later.
+
+\subsubsection{Problem}
+
+Existing context-aware systems are limited by the fact that they cannot provide proactive decision support, but only reactive decision support as in the previous example. In order to obtain such proactive behaviours, context prediction becomes essential. To offer support for proactive decision, the system must be able to provide more useful and personalized information to the user according to her potential future location.
+
+\subsubsection{Contributions}
+
+\paragraph{Results}
+
+This paper proposes an inductive approach to predict future user's locations by creating a dynamic Bayesian network model (DBN). This model is compared with three other selected probabilistic prediction methods: General Bayesian Network (GBN), Tree Augmented Na\"{\i}ve Bayesian Network (TAN) and Na\"{\i}ve Bayesian Network (NBN). The models induced by these methods are evaluated with a tenfold cross-validation (a data set is generally divided in 2 sub-sets: one to train a model and the other to validate it). The results demonstrate that the DBN model outperforms all other models in terms of average accuracy with a percentage of 72.67 \%. The TAN model is the second best performing prediction model with an accuracy of 69.29 \%. As for the GBN and the NBN, they obtain low accuracy compared to the two other models (45.88 \% and 55.27 \% respectively). 
+
+\paragraph{Approach}
+
+In order to clearly understand the Bayesian models considered in this paper, a brief description of each of them is given below. Bayesian networks are Directed Acyclic Graphs (DAGs), which represent the dependencies between nodes and provide a compact representation of full joint probability distributions. Nodes represent variables, or in other words, occurrences of an event or features of an object. NBN is the simplest Bayesian network where there is only one parent node (root node) of all other nodes (child nodes of the root node). TAN is a NBN with also directional links between child nodes. In a GBN, the parent node can also be a child of some child nodes. Contrary to the three others, DBN takes the time into account, more specifically it contains a sequence of static Bayesian networks where each of them represents the state of a variable at different times.
+For the evaluation, a set of contextual data from 336 undergraduate students has been aggregated and used. Students had to record their daily routines over a period of two days on campus. For the GBN, TAN and NBN model induction, Weka machine learning has been used to create three location prediction models. During this automatic learning step, similar to a process of discovery knowledge, different variables have been highlighted: the user's previous action, the user's current action, the user's location and route. Then, in order to induce the new Bayesian approach of the paper (the DBN model) four steps have been applied:
+
+\begin{enumerate}
+
+\item Identify domain variables;
+\item Examine dependencies between domain variables and how they change over time;
+\item Describe how the conditional probability distributions are constructed from the user's action and location data;
+\item Develop procedurally the belief update in order to use it for propagating beliefs through the DBN.
+
+\end{enumerate}
+
+\subsection{Discussion} \label{lect4-disc}
+
+This paper provides a good overview of the different Bayesian network methods for context prediction: from the simplest to the more sophisticated. However this work has several limits and/or might add some potential improvements or extensions.
+
+\begin{itemize}
+
+\item Since students have different habits and perhaps follow different class schedules, the results of this paper may not be accurate because recorded data may not be homogeneous. The authors could use students data of a same class in order to see the differences with the current results.
+
+\item The paper uses a cross-validation. The other possible evaluation approach would have been to use an application for the students who had participated to the research in order to evaluate the location prediction models created. This application would have notified the students with a message containing their next possible location and they would have had to answer if the notice is correct or not.
+
+\item Finally, the last important limit is related to the previous and concerns how we can really integrate these location prediction models in a real application. In addition, with this implementation, we should be able to see how react the models if changes occur in the students' life.
+
+\end{itemize}
