@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: /Users/admin/Desktop/Reading_Exam/Template/.texpadtmp/main.aux
+The top-level auxiliary file: /Users/admin/Desktop/Reading_Exam/.texpadtmp/main.aux
 The style file: abbrv.bst
 Database file #1: ../biblio.bib
 A bad cross reference---entry "conf/europar/PetzoldBTU06"
@@ -8,7 +8,7 @@ refers to entry "conf/europar/2006", which doesn't exist
 Warning--I didn't find a database entry for "conf/europar/2006"
 You've used 5 entries,
             2118 wiz_defined-function locations,
-            542 strings with 5150 characters,
+            542 strings with 5132 characters,
 and the built_in function-call counts, 2213 in all, are:
 = -- 215
 > -- 121

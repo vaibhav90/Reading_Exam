@@ -65,20 +65,32 @@ can be deployed in a range of web applications. Non user-specific model.
 
 \subsection{Discussion} \label{lect1-disc}
 
-The major contribution of the above paper is a methodology to infer the mobility mode given raw GPS
-data logs.    
+The contribution of the above paper is a methodology to infer the mobility mode, given raw GPS
+data logs. The non-user specific model presented in the paper is independent of external sensors 
+such as GSM signals, heart rate and map information like road networks and bus stops. The change 
+point based segmentation method devised by the authors is proved to be robust to variable traffic
+conditions. Thus, it can be deployed in a range of web applications.      
 
 
 \begin{itemize}
 
-\item An important limit of GPS system is its battery life. During the recording step of this work, the user could not anticipate the recharging because there was no visible indication of the battery power level of the GPS system. This problem explains why gaps exist in the data collection and may influence the accuracy of the model created.
+\item The technique presented, involves an offline training phase which uses the extracted features 
+to generate the online transportation mode inference model. It would have been interesting to quantify 
+the data required and computational time/complexity involved at the offline stage to arrive at a sufficient
+online prediction accuracy.
 
-\item The data collection is only related to a single user. At the beginning of the paper, some multi-user applications are described and it would have been interesting to build predictive models for several users, in order to link or to compare them in a multi-user application.
+\item The paper states that the devised approach is a non-user specific model. However, sufficient 
+evaluation of the experimental results regarding generalisation of user specific models is not presented
+in the paper. 
 
-\item The absence of time dimension might be a limit because it is not included in the prediction, while time might have an important impact on the user's movements. Consequently, the Markov model should be extended in order to add this crucial information.
+\item The authors derive several features from the raw GPS logs to train the inference model. Although, 
+it is evident that a combination of certain features results in a sufficient prediction accuracy, a 
+combination of certain features reduces the accuracy. The reasoning behind such a behaviour is lacking 
+in the evaluation section. 
 
-\item If the user changes her habits (home or work place), it is impossible to be sure that the Markov model is really up to date. We could add a threshold and a counter in the algorithm in order to highlight changes and relevant new paths.
+\item Considering majority of the population owning a smart phone have Internet connection, it will be
+interesting to map the extracted segments to road maps and points of interests in the training phase 
+to increase the prediction accuracy. 
 
-\item Finally, it is very important to build a model but it is also important to validate it in order to demonstrate that the model is relevant. However, a validation section misses in this paper. For example, this validation section could be detailed with some queries realized on the system in order to show the level of accuracy or margin or error of the predictive model.
 
 \end{itemize}
