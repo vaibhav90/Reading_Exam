@@ -25,53 +25,59 @@ characterised by high regularity and this is predictable.
 \subsubsection{Contributions}
 
 The paper dismisses many of the common assumptions associated with human mobility prediction
-by experimental evaluation of several mobility datasets. 
-
-\paragraph{Results}
-
-
+by experimental evaluation of several mobility datasets. Here lies the major contribution of 
+the paper as it established bounds for various aspects of prediction. 
 
 \begin{itemize}
 
-\item \emph{Prediction accuracy} is the number of correct predictions divided by the number of deliverable predictions (deliverable predictions are those that provide a result, because some techniques cannot provide a result if current pattern occurs the first time);
-
-\item \emph{Quantity} is the number of deliverable predictions divided by the number of requested predictions;
-
-\item \emph{Stability} is the difference between the minimum and the maximum of the prediction accuracies reached with different parameters related to the prediction method such as time;
-
-\item \emph{Learning} is the time taken between the beginning of the training phase of a network or a model and when it can be effectively used;
-
-\item \emph{Relearning} is the time taken to learn a new habit;
-
-\item \emph{Memory cost} is the minimal number of bits to store the current state of the technique;
-
-\item \emph{Computing cost} can be a table look-up, a specific training or another cost;
-
-\item \emph{Modelling effort} is the effort made to find variables, parameters and other elements in order to obtain a model or a network;
-
-\item \emph{Expendability} indicates if it is possible to use the network or the model with more locations;
-
-\item \emph{Time prediction} highlights if the time prediction is integrated or in parallel.
-
+	\item The article presents a technique to measure the entropy associated with user movement. 
+	The entropies can be classified in to random entropy (number of distinct locations visited by the user), 
+	temporal-uncorrelated entropy (characterises the heterogeneity of visitation patterns) and the actual
+	entropy (accounts the order in which the nodes are visited). This distinction aids to arrive at the 
+	conclusion that user movement can be predicted irrespective of the entropy thus dismissing the 
+	general assumption that only lower entropy implies higher predictability. 
+		
+	\item The authors evaluate the Fano's inequality bound on predictability when a user with a given entropy 
+	moves between N locations. It was discovered that, despite of the apparent randomness of the individual
+	trajectories there exists a high degree of potential predictability in user movement. 
+	
+	\item The analysis also led to a conclusion that, the predictability across a large user base is insignificant 
+	and varies from person to person. Further, it was also found that, users covering larger distances on regular 
+	basis are just as predictable as users commuting in a small area. 
+	
+	\item Similar results were obtained when experiments were performed on diverse demographics of varying ages and 
+	genders, i.e. only insignificant variations were found in regularity. This concludes that regularity and thus 
+	predictability is not imposed by demographic factors, but instead by intrinsic human activities. 
+	
+	\item The combination of the empirically determined user entropy by the authors and Fano's inequality leads 
+	to a potential 93\% average predictability in user mobility. 
+	
 \end{itemize}
 
-The results obtained show that the most accurate techniques (state predictor followed by Markov predictor) are the ones including the confidence counter. However, if the confidence counter is not taken into account, the most accurate technique is the Elman net. Furthermore, the state predictor is the fastest relearning method. Finally, the results also indicate that it is impossible to highlight a 'one size fits all' technique. Indeed, persons who want to predict future locations in a specific application must define the most important criteria of this particular application and find a technique that matches these criteria.
-
 \paragraph{Approach}
-In this paper, a location prediction model is described as a function with input data (history) and output data (prediction result). The input is composed of a sequence of the past visited locations with the entry time for each of these locations, while the output is the most likely future location and its forecast entry time. For the evaluation of these five techniques, a set of benchmarks called the 'Augsburg Indoor Location Tracking Benchmarks' are used. These benchmarks contain the movements of four persons in an office building divided in two different sets (fall and summer data). The summer data set is used for training while the fall data set for computing the prediction accuracy. Furthermore, this evaluation does not take into account contextual knowledge (the personal schedule of a person for example).
 
+A dataset representing the call patterns of 10~million mobile phone users was used containing the routing tower 
+location. The data was filtered to have only the users with a sufficient calling frequency and high 
+movement which was further characterised individual call/motion activity. This data was processed to construct 
+a time series for each user to determine their entropy, movement regularity and dependence on the demographic
+and population density. 
+ 
 \subsection{Discussion} \label{lect2-disc}
-
-This comparison is a helpful guide aiming at facilitating the choice of prediction methods. Indeed, we can easily see what technique is better according to which criterion, especially as all the criteria are well described with some examples in the paper. In addition, we can talk about several limits and/or improvements.
 
 \begin{itemize}
 
-\item The choice of the five techniques is not clearly explained and motivated. The authors only indicate that their comparison is focused on the evaluation of next location methods but they do not really explain why they have chosen these methods. Are they the only existing methods?
 
-\item Some of the chosen techniques are not sufficiently detailed. Indeed, some techniques are very complex and it would have been better to describe in detail how they work and how we can implement them.
+\item The used dataset was collected in a high income country where having a 93\% potential predictability
+in user mobility is acceptable despite very large differences in travel distances due to the regularity 
+and availability of transportation modes. However, it will be interesting to characterise similar parameters 
+in the low income and densely populated countries which face much more extreme conditions
+so as to generalise the findings.  
 
-\item In this paper, it is written that the best settings for each technique have not always been used during the evaluation. Consequently, this choice can promote some techniques and disadvantage the others. In addition, the real accuracy might not be properly evaluated.
+\item Although the authors calculated the bounds on predictability by defining entropy and movement regularity, 
+the paper did not show how close to the maximum potential predictability, the accuracy of actual algorithms can 
+come in practice. 
 
-\item As the confidence counter seems to improve the Markov predictor and the state predictor, it could also be included in the dynamic Bayesian network method, in the multi-layer perceptron method as well as in Elman net method in order to see if we observe the same accuracy improvements.
+\item 
+
 
 \end{itemize}
