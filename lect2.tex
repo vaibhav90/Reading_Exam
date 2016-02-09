@@ -1,20 +1,35 @@
 \newpage
-\section{Comparison of Different Methods for Next Location Prediction \cite{conf/europar/PetzoldBTU06}} \label{lect2}
+\section{Limits of Predictability in Human Mobility\cite{Song1018}} \label{lect2}
 
 \subsection{Summary} \label{lect2-sum}
 
 \subsubsection{Context}
 
-An important number of prediction techniques have been implemented in order to predict the future locations of users based on their previous locations. Location prediction can be very useful in everyday life: in a smart building, it can be used to prepare a room where a user may enter. In research literature, several prediction methods have been described, such as Bayesian networks, neural networks, as well as Markov chains.
+Human behaviour is characterised by spontaneity, randomness and change. This paper puts
+forth an important contribution in stating to what extent human mobility is predictable. 
+The authors identify a metric, "Entropy" as a means to measure the potential predictability
+in user mobility. Although, the paper might seem trivial, it can be seen as a base research
+in order to make explicit predictions on user whereabouts. 
 
 \subsubsection{Problem}
 
-Generally, people have some habits but they can also modify them suddenly or irregularly. In addition, when a specific event occurs, their daily movements can be entirely transformed. Prediction methods must take into account such potential changes. Consequently, prediction methods have to exhibit properties such as high prediction accuracy, short training time, as well as appropriate relearning time if changes occur. Therefore, it seems interesting and useful to compare and evaluate various prediction methods according several selected criteria in order to highlight the strengths and weaknesses of each method.
+The authors take an interesting approach to model human activity which is not stochastic 
+based. There exist several probabilistic based models, as a result it is necessary to 
+know the degree of randomness in human behaviour and the extent to which human mobility 
+is predictable. Furthermore, it is important to know the bounds of predictability 
+characterised by the mobility entropy, travel distance, frequency of visits, time spent 
+at a particular location and heterogeneity of the visitation patterns. This papers fills this
+void by experimentally analysing the above bounds and concluding that human mobility is 
+characterised by high regularity and this is predictable.          
 
 \subsubsection{Contributions}
 
+The paper dismisses many of the common assumptions associated with human mobility prediction
+by experimental evaluation of several mobility datasets. 
+
 \paragraph{Results}
-The main contribution of this paper is its comparison of five prediction techniques on the basis of several selected criteria. The selected five prediction techniques are: dynamic Bayesian network, multi-layer perceptron (neural network), Elman net (neural network), Markov predictor, as well as state predictor. In addition, optimized versions of the Markov and state predictor with a confidence counter are added to these selected techniques. In order to compare these techniques, ten criteria were chosen: 
+
+
 
 \begin{itemize}
 

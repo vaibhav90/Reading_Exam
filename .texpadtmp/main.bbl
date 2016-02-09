@@ -17,18 +17,14 @@ S.~Lee and K.~C. Lee.
   Emphasis on location prediction in ubiquitous decision support environment.
 \newblock {\em Expert Syst. Appl.}, 39(5):4908--4914, 2012.
 
-\bibitem{conf/europar/PetzoldBTU06}
-J.~Petzold, F.~Bagci, W.~Trumler, and T.~Ungerer.
-\newblock Comparison of different methods for next location prediction.
-\newblock In W.~E. Nagel, W.~V. Walter, and W.~Lehner, editors, {\em Euro-Par},
-  volume 4128 of {\em Lecture Notes in Computer Science}, pages 909--918.
-  Springer, 2006.
+\bibitem{Song1018}
+C.~Song, Z.~Qu, N.~Blumm, and A.-L. Barab{\'a}si.
+\newblock Limits of predictability in human mobility.
+\newblock {\em Science}, 2010.
 
 \bibitem{Zheng:2008:UMB:1409635.1409677}
 Y.~Zheng, Q.~Li, Y.~Chen, X.~Xie, and W.-Y. Ma.
 \newblock Understanding mobility based on gps data.
-\newblock In {\em Proceedings of the 10th International Conference on
-  Ubiquitous Computing}, UbiComp '08, pages 312--321, New York, NY, USA, 2008.
-  ACM.
+\newblock UbiComp '08. ACM, 2008.
 
 \end{thebibliography}

@@ -85,12 +85,14 @@ in the paper.
 
 \item The authors derive several features from the raw GPS logs to train the inference model. Although, 
 it is evident that a combination of certain features results in a sufficient prediction accuracy, a 
-combination of certain features reduces the accuracy. The reasoning behind such a behaviour is lacking 
+combination of a particular features reduces the accuracy. The reasoning behind such a behaviour is lacking 
 in the evaluation section. 
 
 \item Considering majority of the population owning a smart phone have Internet connection, it will be
 interesting to map the extracted segments to road maps and points of interests in the training phase 
 to increase the prediction accuracy. 
 
-
+\item The segmentation technique described, extracts segments from consecutive GPS points. However, there
+will exist some segments which do not offer any valuable information for feature extraction. It will 
+also be interesting to extract the only segments providing valuable information based on other attributes.   
 \end{itemize}

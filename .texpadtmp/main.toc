@@ -7,7 +7,7 @@
 \contentsline {paragraph}{Results\newline }{4}{section*.2}
 \contentsline {paragraph}{Approach\newline }{4}{section*.3}
 \contentsline {subsection}{\numberline {2.2}Discussion}{5}{subsection.2.2}
-\contentsline {section}{\numberline {3}Comparison of Different Methods for Next Location Prediction \cite {conf/europar/PetzoldBTU06}}{6}{section.3}
+\contentsline {section}{\numberline {3}Limits of Predictability in Human Mobility\cite {Song1018}}{6}{section.3}
 \contentsline {subsection}{\numberline {3.1}Summary}{6}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Context}{6}{subsubsection.3.1.1}
 \contentsline {subsubsection}{\numberline {3.1.2}Problem}{6}{subsubsection.3.1.2}
