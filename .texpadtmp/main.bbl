@@ -6,16 +6,16 @@ V.~Etter, M.~Kafsi, E.~Kazemi, M.~Grossglauser, and P.~Thiran.
   information}.
 \newblock {\em Pervasive and Mobile Computing}, July 2013.
 
-\bibitem{Gambs:2011:SMY:2019316.2019320}
-S.~Gambs, M.-O. Killijian, and M.~N\'{u}\`{o}ez~del Prado~Cortez.
-\newblock Show me how you move and i will tell you who you are.
-\newblock {\em Trans. Data Privacy}, 4(2):103--126, Aug. 2011.
-
 \bibitem{journals/eswa/LeeL12}
 S.~Lee and K.~C. Lee.
 \newblock Context-prediction performance by a dynamic bayesian network:
   Emphasis on location prediction in ubiquitous decision support environment.
 \newblock {\em Expert Syst. Appl.}, 39(5):4908--4914, 2012.
+
+\bibitem{Shokri:2015:PDL:2810103.2813687}
+R.~Shokri and V.~Shmatikov.
+\newblock Privacy-preserving deep learning.
+\newblock CCS '15, 2015.
 
 \bibitem{Song1018}
 C.~Song, Z.~Qu, N.~Blumm, and A.-L. Barab{\'a}si.

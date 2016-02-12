@@ -1,48 +1,93 @@
 \newpage
-\section{Show Me How You Move and I Will Tell You Who You Are \cite{Gambs:2011:SMY:2019316.2019320}} \label{lect3}
+\section{Privacy-Preserving Deep Learning~\cite{Shokri:2015:PDL:2810103.2813687}}~\label{lect3}
 
 \subsection{Summary} \label{lect3-sum}
 
 \subsubsection{Context}
-Due to the constant increase of applications on smartphones or computers that extract and manipulate geolocated data about users, inference attacks on these geolocated data constitute a serious risk. Indeed, with this type of data and inference techniques, discovering users' behaviours become a rather easy task. For instance, based on the movements of a user, it is possible to learn where she lives, where she works as well as her social network, typically by correlating her movements with those of other users.
+
+Today, commercial companies such as Facebook, Google and Apple collect a large amount of user data to learn 
+about user preferences and suggest recommendations. This requires a large amount of data related to the users, 
+a considerable part of which is highly sensitive personal information. This data is used to formulate user specific 
+models, generation of which is aided by techniques such as deep learning. On the other hand, biomedical and 
+clinical researchers cannot attain benefits from these techniques as not permitted to share their data. As 
+a result privacy and confidentiality restrictions reduce the utility. 
 
 \subsubsection{Problem}
-In order to protect geolocated data, there exist sanitization mechanisms, which add uncertainty to the data and remove sensitive aspects. A sanitization process has an impact on the power of a potential adversary (an entity that tries to infer users' information from their geolocated data) and should make its work harder. However, there exist a lot of sanitization mechanisms and it may be hard to make a relevant choice among them.
+
+Deep learning presents a interesting avenue to extract highly accurate models by deriving complex features from high
+dimensional data. Although, such accurate models can give rise to high utility applications they present serious
+privacy issues due to user data stored in the servers, which is also used for monetary gains by these companies. As 
+a result, there is a need to alter these model generation techniques to offer a satisfactory point in the utility/
+privacy tradeoff space. 
 
 \subsubsection{Contributions}
 
-\paragraph{Results}
-In order to help researchers to evaluate various sanitization mechanisms and inference attacks on geolocated data, this paper presents some results of experiments that show the impact of several inference attacks according some sanitization mechanisms. Furthermore, by using a flexible toolkit named GEPETO (GEoPrivacy Enhancing TOolkit), this work demonstrates how this tool is helpful to compare sanitization mechanisms according different inference attacks. The results of this paper highlight that the inference attacks can diverge significantly depending on the sanitization mechanisms. In other words, it shows that sanitization mechanisms do not offer equal protection of the data.
+The authors device a distributed deep learning technique that collaborates with multiple participants to learn a 
+neural-network model on their own inputs, without explicitly sharing these inputs. The key contributions can be 
+summarised as follows: 
+
+\begin{itemize}
+	\item A selective parameter update model: During training iterations, some attributes contribute largely
+	towards a neural networks objective function as compared to others. This model selects parameters whose
+	current value is far away from the local optima. Only these parameters are updated collaboratively to 
+	undergo bigger changes in subsequent iterations. 
+	
+	\item Distributed collaborative learning: After every iteration of local training, participants
+	asynchronously share the computed gradients with each other. Therefore benefiting from each others
+	training data without actually sharing it. Thus preserving the privacy of the participants.  
+	
+\end{itemize}
 
 \paragraph{Approach}
-In this paper, three experiments illustrate these results.
+
+The system architecture consists of a local training database for performing the training locally
+and parameter server which can be an actual server or a distributed system for running the parameter 
+and gradient exchange protocol. 
 
 \begin{itemize}
-
-\item For the first experiment, private data (coordinates) about taxi drivers in San Francisco was loaded in GEPETO in order to highlight critical Points Of Interests (POIs), such as home place or work place, of these drivers by applying a 'Begin and end location finder' heuristic inference attack on these data. For 20 to 90 taxi drivers, their home location was found precisely and checked on a map;
-
-\item In the second experiment, three clustering algorithms and the previous technique were compared according two sanitization mechanisms (sampling and perturbation). These four techniques also aim at the discovery of POIs of these taxi drivers from their geolocated data and play the role of a potential adversary. The results show that two clustering algorithms are quite resilient to sampling, while with the perturbation technique (distortion), none of the clustering algorithms performed with a precision greater than 50 \% under a distortion of magnitude 400 meters;
-
-\item Finally, the last experiment shows that the mobility Markov chain (also used like an inference attack) is a compact and reliable representation of the mobility behaviour of a user. Although this structure is relatively robust to sanitization mechanisms, some POIs with a lesser density may be loose when the sanitization mechanisms are applied on data. Indeed, the Markov chain algorithm enables to highlight transitions between POIs, found by a clustering algorithm. In addition, a probability is assigned to each transition and corresponds to the probability of moving from one state to another.
-
+	\item Each participant maintains a local vector of neural network parameters. A training iteration
+	is performed over the local training data. Next, the participant downloads the parameters uploaded 
+	at the server and computes the gradient of each parameter. 
+	
+	\item The parameter server initialises the parameter vector and handles the participants upload and 
+	download requests. 
+	
+	\item Distributed Stochastic Gradient Descent: While training alone, every participant is more likely 
+	to converge to a local optima. However using a distributed approach in learning, by using parameters
+	trained on different datasets, can help to escape local optima resulting in more accurate models. 
+	
+	\item Parameter exchange protocol: The authors assume round robin to run the gradient decent 
+	sequentially. Every participant downloads the most updated parameters from the server, runs local 
+	training and uploads selected gradients and the next participant follows in the fixed order. 
 \end{itemize}
 
-For these three experiments, only several sanitization mechanisms and inference attacks were implemented in GEPETO, but obviously it is possible to enrich/extend it with other techniques.
+\subsection{Results and Discussion} \label{lect3-disc}
 
-\subsection{Discussion} \label{lect3-disc}
-
-This paper introduces a very helpful and flexible tool for the geolocated data privacy domain. Although GEPETO is an important tool in order to make a choice among several sanitization mechanisms, the overall results and GEPETO present some limits and/or might include the following improvements.
+The authors implemented distributed gradient decent with round robin, random order, and asynchronous parameter
+exchange protocols. The results were compared with two scenarios, running a gradient descent on the entire dataset 
+and the other is standalone gradient descent where participants train only on their own training data without 
+collaboration. The evaluation was performed 	on two major datasets used as benchmarks in deep-learning. 
+The key results can be summarised as below:
 
 \begin{itemize}
-
-\item Time dimension is not taken into account in the implementation of the mobility Markov chain. This addition might be a good improvement in order to increase the quality and the accuracy of the representation of the mobility behaviour of a user.
-
-\item Obviously, not all the sanitization mechanisms, known in research literature, are compared in this paper. Only sampling and perturbation mechanisms are presented, but other mechanisms exist such as aggregation, spatial cloaking, mix-zones, as well as swapping and should be implemented.
-
-\item GEPETO should allow us to combine several different sanitization mechanisms in order to see if the data is better protected.
-
-\item GEPETO could include the possibility to add additional knowledge about users (user's calendar for example) in order to create more sophisticated inference attacks and to test them with GEPETO.
-
-\item To finish, the comparison of several users models should be possible with GEPETO in the interest in discovering links between them in order to find their potential social network for example.
-
+	\item The authors achieved the same accuracy as simple stochastic gradient decent as compared to gradient 
+	descent ran by sharing only a small fraction of gradients at each iteration step. 	
+	
+	\item The results obtained show that even at sharing only 1 percent of parameters, results in higher accuracy
+	than standalone or centralised learning. 
+	
+	\item Distributed gradient descent using round robin parameter resulted in the highest accuracy and was discovered 
+	that round robin protocol is suitable for scenarios where all participants have similar computational capacity. 
+	
+	\item It was also observed that number of participants has a lower impact on accuracy than the percentage of shared parameters. 
+	Assuming each participant shares his largest gradients with other participants.
+	
+	\item The system computes the differential privacy of each parameter and than decides which one to share with other 
+	participants resulting in lower privacy leakage. Further, the authors find the sensitivity index for each parameter, 	
+	quantifying the amount of random noise which needs to be added to achieve a certain level of differential privacy. 
+	
 \end{itemize}
+
+The experiments conducted in the paper are based on supervised learning, it will be interesting to evaluate the accuracy 
+of distributed stochastic gradient descent on unsupervised learning approaches. 
+
