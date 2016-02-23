@@ -26,8 +26,8 @@
 \contentsline {subsubsection}{\numberline {5.1.1}Context}{10}{subsubsection.5.1.1}
 \contentsline {subsubsection}{\numberline {5.1.2}Problem}{10}{subsubsection.5.1.2}
 \contentsline {subsubsection}{\numberline {5.1.3}Contributions}{10}{subsubsection.5.1.3}
-\contentsline {paragraph}{Results}{10}{section*.6}
-\contentsline {paragraph}{Approach}{10}{section*.7}
+\contentsline {paragraph}{Approach}{11}{section*.6}
+\contentsline {paragraph}{Results}{11}{section*.7}
 \contentsline {subsection}{\numberline {5.2}Discussion}{11}{subsection.5.2}
 \contentsline {section}{\numberline {6}Where to go from here? Mobility prediction from instantaneous information \cite {etter:prediction}}{12}{section.6}
 \contentsline {subsection}{\numberline {6.1}Summary}{12}{subsection.6.1}

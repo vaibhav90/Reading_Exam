@@ -1,6 +1,6 @@
 \newpage
 \section{Hiding Stars with Fireworks:
-Location Privacy through Camouflage \cite{conf/europar/PetzoldBTU06}} \label{lect4}
+Location Privacy through Camouflage \cite{conf/europar/PetzoldBTU06}}\label{lect4}
 
 \subsection{Summary} \label{lect4-sum}
 
@@ -11,7 +11,7 @@ years due to ubiquitous wireless connectivity and GPS modules integrated with
 smart phones. These LBS rely on accurate, continuous and realtime streaming of 
 location data. However, revealing this information to service providers poses a 
 significant privacy risk. In this paper, the authors device a method to preserve
-user privacy without trading on the services offered by the LBS. 
+user privacy without trading off the quality of services offered by the LBS. 
 
 \subsubsection{Problem}
 
@@ -26,37 +26,82 @@ offer high quality services.
   
 \subsubsection{Contributions}
 
-
-
-
-\paragraph{Results}
-
+\begin{enumerate}
+	\item The paper proposes CacheCloak, which acts as an intermediary server 
+	between the users' and the LBS. The framework utilises mobility prediction in
+	order to camouflage the user by requesting information for a series of 
+	predicted interweaving paths instead of a single GPS coordinate. 
+	
+	\item CacheCloak extends "Path Confusion" technique and fixes its trivial 
+	flaw which is the inherent delay caused while answering queries. Path 
+	prediction and prospective caching retains the benefits of path confusion 
+	without incurring the delay of path confusion. 
+	
+	\item The iterated Markov prediction model is robust to high number of 
+	mis-predictions as the user will always see only up-to-date cached data. 
+	Requesting new data for mis-predictions comes at a low cost compared to 
+	necessity of privacy. 
+	
+	\item The authors, evaluate the proposed framework considering a realistic
+	attacker model. The diffusive method, models an attacker trying to follow
+	every possible way the user might go considering different speeds and 
+	directions. 
+	
+	\item The paper proposes a quantitative measure of privacy based on 
+	the attackers ability or inability to track the user over time. 
+	
+	\item Finally the authors discuss a practical implementation of a distributed
+	form of CacheCloak under the assumption that the intermediary server is 
+	untrusted. 
+	
+\end{enumerate}
 
 
 \paragraph{Approach}
 
-In order to clearly understand the Bayesian models considered in this paper, a brief description of each of them is given below. Bayesian networks are Directed Acyclic Graphs (DAGs), which represent the dependencies between nodes and provide a compact representation of full joint probability distributions. Nodes represent variables, or in other words, occurrences of an event or features of an object. NBN is the simplest Bayesian network where there is only one parent node (root node) of all other nodes (child nodes of the root node). TAN is a NBN with also directional links between child nodes. In a GBN, the parent node can also be a child of some child nodes. Contrary to the three others, DBN takes the time into account, more specifically it contains a sequence of static Bayesian networks where each of them represents the state of a variable at different times.
-For the evaluation, a set of contextual data from 336 undergraduate students has been aggregated and used. Students had to record their daily routines over a period of two days on campus. For the GBN, TAN and NBN model induction, Weka machine learning has been used to create three location prediction models. During this automatic learning step, similar to a process of discovery knowledge, different variables have been highlighted: the user's previous action, the user's current action, the user's location and route. Then, in order to induce the new Bayesian approach of the paper (the DBN model) four steps have been applied:
+\begin{enumerate}
+	\item The authors carry out a trace-based simulation in order to have realistic operating
+	 conditions. A city map was loaded into a simulator with virtual drivers following physical laws
+	 and defined speed limits, with random placement of vehicles on the map as a bootstrapping
+	 criteria. The user location was written in a file system as the simulation progressed. These
+	 traces were loaded into CacheCloak chronologically, simulating a real time stream.
+	 
+	 \item Two cases can arise while operating CacheCloak, the submitted coordinates can already
+	 have the information associated with them cached which is termed as cache hit. On the contrary, 
+	 if the information for a coordinate is not cached, a path prediction needs to be performed. The
+	 predicted path is extrapolated until it is connected on both ends to other predicted paths 
+	 present in the cache. 
+	 
+	 \item Next, the entire generated path is sent to the LBS and all responses for all locations
+	 are retrieved and cached. If the user deviates from the predicted path, new requests to the 
+	 LBS will be triggered and corresponding results will be cached. 
+	 
+	 \item Based on a formulated attacker model, the authors evaluate and quantify the location 
+	 privacy based on entropy which provides a measure of attacker's uncertainty. 
+	
+	
+\end{enumerate}
+
+\paragraph{Results}
+
+The results show that CacheCloak can provide users with multiple bits
+of entropy within a maximum of 10 minutes. The evaluations also show that
+such entropies can be achieved even in sparse populations. 
+
+\subsection{Discussion} 
 
 \begin{enumerate}
 
-\item Identify domain variables;
-\item Examine dependencies between domain variables and how they change over time;
-\item Describe how the conditional probability distributions are constructed from the user's action and location data;
-\item Develop procedurally the belief update in order to use it for propagating beliefs through the DBN.
-
+	\item The paper also discusses a distributed implementation of CacheCloak in which the devices 
+	will have to perform their own mobility predictions. It will be interesting to investigate the 
+	feasibility of the diffusion schemes and the iterative Markov model and quantify the cost of 
+	incorrect predictions. As incorrect predictions only lead to communication costs while running 
+	it on the CacheCloak Server, now it will also result in computational costs. 
+	
+	\item In the paper, the the authors primarily investigate the application of CacheCloak to 
+	vehicular mobility, more specifically, cars. However, a considerable proportion of the 
+	population use mixed modes of transportation. Their mobility behaviour involves bus/train/
+	walking	or all of them, in which case the predictions are not so straightforward. As a result 
+	some alterations in the proposed framework needs to be made to have a practical viability. 
+	
 \end{enumerate}
-
-\subsection{Discussion} \label{lect4-disc}
-
-This paper provides a good overview of the different Bayesian network methods for context prediction: from the simplest to the more sophisticated. However this work has several limits and/or might add some potential improvements or extensions.
-
-\begin{itemize}
-
-\item Since students have different habits and perhaps follow different class schedules, the results of this paper may not be accurate because recorded data may not be homogeneous. The authors could use students data of a same class in order to see the differences with the current results.
-
-\item The paper uses a cross-validation. The other possible evaluation approach would have been to use an application for the students who had participated to the research in order to evaluate the location prediction models created. This application would have notified the students with a message containing their next possible location and they would have had to answer if the notice is correct or not.
-
-\item Finally, the last important limit is related to the previous and concerns how we can really integrate these location prediction models in a real application. In addition, with this implementation, we should be able to see how react the models if changes occur in the students' life.
-
-\end{itemize}
