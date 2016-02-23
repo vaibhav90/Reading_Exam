@@ -1,21 +1,37 @@
 \newpage
-\section{Context-prediction performance by a dynamic Bayesian network: Emphasis on location prediction in ubiquitous decision support environment \cite{journals/eswa/LeeL12}} \label{lect4}
+\section{Hiding Stars with Fireworks:
+Location Privacy through Camouflage \cite{conf/europar/PetzoldBTU06}} \label{lect4}
 
 \subsection{Summary} \label{lect4-sum}
 
 \subsubsection{Context}
 
-The interest in context-aware devices, such as smartphones, is increasing. Since these devices have more and more interactions with their users, they are ubiquitous in our lives. These interactions have been made possible because smartphones react according to the context and because they are able to adapt to changes in context. In addition, such devices can be good at helping people in making timely decisions. For example, when a user receives an alert on her smartphone indicating that an electrical problem just occurred on a particular route of the transportation network, she can decide to leave later.
+There has been a rapid proliferation of Location Based Services (LBS) in recent
+years due to ubiquitous wireless connectivity and GPS modules integrated with 
+smart phones. These LBS rely on accurate, continuous and realtime streaming of 
+location data. However, revealing this information to service providers poses a 
+significant privacy risk. In this paper, the authors device a method to preserve
+user privacy without trading on the services offered by the LBS. 
 
 \subsubsection{Problem}
 
-Existing context-aware systems are limited by the fact that they cannot provide proactive decision support, but only reactive decision support as in the previous example. In order to obtain such proactive behaviours, context prediction becomes essential. To offer support for proactive decision, the system must be able to provide more useful and personalized information to the user according to her potential future location.
-
+Existing research on user privacy protection in LBS takes the approach of 
+obscuring user's path, compromising the accuracy of services offered by the 
+LBS. Hiding parts of user's paths can lead to degrading the the spatial accuracy, 
+increased delay in reporting user location or temporarily preventing the user from
+reporting locations completely. This leads to user data being less useful after
+enabling privacy protection. As a result a framework is needed which can protect
+the user against location tracking by the service providers at the same time
+offer high quality services. 
+  
 \subsubsection{Contributions}
+
+
+
 
 \paragraph{Results}
 
-This paper proposes an inductive approach to predict future user's locations by creating a dynamic Bayesian network model (DBN). This model is compared with three other selected probabilistic prediction methods: General Bayesian Network (GBN), Tree Augmented Na\"{\i}ve Bayesian Network (TAN) and Na\"{\i}ve Bayesian Network (NBN). The models induced by these methods are evaluated with a tenfold cross-validation (a data set is generally divided in 2 sub-sets: one to train a model and the other to validate it). The results demonstrate that the DBN model outperforms all other models in terms of average accuracy with a percentage of 72.67 \%. The TAN model is the second best performing prediction model with an accuracy of 69.29 \%. As for the GBN and the NBN, they obtain low accuracy compared to the two other models (45.88 \% and 55.27 \% respectively). 
+
 
 \paragraph{Approach}
 
