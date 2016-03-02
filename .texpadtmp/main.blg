@@ -3,48 +3,49 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: /Users/admin/Desktop/Reading_Exam/.texpadtmp/main.aux
 The style file: abbrv.bst
 Database file #1: ../biblio.bib
+Warning--empty year in DBLP:conf/wowmom/BayirDE09
 Warning--empty title in conf/europar/PetzoldBTU06
 Warning--empty booktitle in Shokri:2015:PDL:2810103.2813687
 Warning--empty booktitle in Zheng:2008:UMB:1409635.1409677
 You've used 5 entries,
             2118 wiz_defined-function locations,
-            527 strings with 4640 characters,
-and the built_in function-call counts, 1640 in all, are:
-= -- 139
-> -- 115
+            527 strings with 4608 characters,
+and the built_in function-call counts, 1609 in all, are:
+= -- 134
+> -- 105
 < -- 1
-+ -- 45
-- -- 40
-* -- 118
-:= -- 296
++ -- 41
+- -- 36
+* -- 111
+:= -- 283
 add.period$ -- 15
 call.type$ -- 5
-change.case$ -- 34
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 60
-empty$ -- 115
-format.name$ -- 40
+cite$ -- 9
+duplicate$ -- 64
+empty$ -- 126
+format.name$ -- 36
 if$ -- 325
 int.to.chr$ -- 0
 int.to.str$ -- 5
 missing$ -- 5
 newline$ -- 27
 num.names$ -- 10
-pop$ -- 45
+pop$ -- 49
 preamble$ -- 1
-purify$ -- 30
+purify$ -- 28
 quote$ -- 0
-skip$ -- 37
+skip$ -- 36
 stack$ -- 0
 substring$ -- 25
-swap$ -- 7
+swap$ -- 8
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 20
-warning$ -- 3
+warning$ -- 4
 while$ -- 10
 width$ -- 6
-write$ -- 52
-(There were 3 warnings)
+write$ -- 51
+(There were 4 warnings)

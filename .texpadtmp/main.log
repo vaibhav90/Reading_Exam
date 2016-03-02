@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.21)  23 FEB 2016 17:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.21)  2 MAR 2016 17:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -288,7 +288,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 2.
 
-<images/tm1.pdf, id=66, 563.10374pt x 132.495pt>
+<images/tm1.pdf, id=65, 563.10374pt x 132.495pt>
 File: images/tm1.pdf Graphic file (type pdf)
  <use images/tm1.pdf>
 Package pdftex.def Info: images/tm1.pdf used on input line 28.
@@ -343,17 +343,17 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 44.
  ) 
 Here is how much of TeX's memory you used:
  5810 strings out of 493089
- 86461 string characters out of 6134842
- 181544 words of memory out of 5000000
+ 86481 string characters out of 6134842
+ 178554 words of memory out of 5000000
  9174 multiletter control sequences out of 15000+600000
  6974 words of font info for 25 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,10n,43p,1059b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,10n,43p,645b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on /Users/admin/Desktop/Reading_Exam/.texpadtmp/main.pdf (14 pages, 155901 bytes).
+Output written on /Users/admin/Desktop/Reading_Exam/.texpadtmp/main.pdf (14 pages, 152670 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
- 198 compressed objects within 2 object streams
+ 224 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
  74 named destinations out of 1000 (max. 500000)
  54 words of extra memory for PDF output out of 10000 (max. 10000000)
 
