@@ -37,7 +37,7 @@ The main contributions of the paper can be summarised as below:
 	\item The papers presents a change point based segmentation technique to extract mobility 
 	trajectories from raw GPS logs. 
 	
-	\item The technique presented in the paper to infer the mobility mode is is independent 
+	\item The technique presented in the paper to infer the mobility mode is independent 
 	of any additional database of road networks or Point of Interests (POI's). Therefore it can 
 	be deployed in a range of web applications. 
 \end{itemize}
@@ -58,13 +58,13 @@ processing stage. In the offline learning part, the GPS trajectories are partiti
 depending on the direction change points. The individual segments are than utilised to extract
 several features which are used to train a classification model for the online inference stage.\newline
 
-When the GPS trajectory comes, it is first partitioned into segments from which several features such as
-direction change rate, velocity change rate, stop rate and heading direction are extracted.
+When the GPS trajectory is extracted, it is first partitioned into segments from which features such as
+direction change rate, velocity change rate, stop rate and heading direction are computed.
 Using these features, the inference model is utilised to predict the transportation mode for
 a given segment in a probabilistic manner. As a classification model, decision tree is used based on
-a change point based segmentation method. The change points are grouped into several clusters using
+a change point based segmentation method. The change points are grouped into clusters using
 a density-based clustering algorithm. The derived clusters are used to construct an undirected graph
-with nodes as individual cluster and edges being the transportation between nodes. A spatial index is
+with nodes as an individual cluster and edges being the transportation between nodes. A spatial index is
 built over the graph to improve the efficiency of accessing information of each node and edge. Finally,
 the probability distribution is calculated of different transportation modes on each edge.
 
@@ -87,7 +87,7 @@ sufficient online prediction accuracy.
 evaluation of the experimental results regarding generalisation of user specific models is not presented
 in the paper.
 
-\item The authors derive several features from the raw GPS logs to train the inference model. Although,
+\item The authors derive features from the raw GPS logs to train the inference model. Although,
 it is evident that a combination of certain features results in a sufficient prediction accuracy, a
 combination of a particular features reduces the accuracy. The reasoning behind such a behaviour is
 lacking in the evaluation section.

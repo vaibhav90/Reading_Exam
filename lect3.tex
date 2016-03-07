@@ -8,7 +8,7 @@
 In order to develop applications, related to context-based search and advertising, inherent
 in Location Based Services, it is trivial to understand the mobility patterns and profiles of
 users. These patterns need to be extracted from the raw GPS traces which are available from the 
-cellphones. Different users have distinct behaviours which influence their mobility patterns as 
+cellphones. Different users have distinct behaviours which influence their mobility patterns, as 
 a result it is crucial to discover these factors which affect the mobility path information
 retrieval. This paper focuses on discovering the spatiotemporal mobility patterns and mobility
 profiles from cell phone location logs.  
@@ -19,9 +19,9 @@ profiles from cell phone location logs.
 Today, the LBS providers continuously monitor their users and log their location information, in 
 the form of GPS coordinates. However, extracting meaningful information out of these raw traces is
 a challenge due to the anomalies caused while tracking and user specific behaviour. On the 
-contrary to the existing works which are restricted to small scale environments in order to 
+contrary to the existing work which are restricted to small scale environments in order to 
 study human mobility, this paper puts forth a framework "Mobility Profiler", for discovering user
-mobility patterns user profiles at a city wide level using cellular networks.  
+mobility patterns and user profiles at a city wide level using cellular networks.  
 
 \subsection*{Contributions}
 
@@ -37,7 +37,7 @@ The main contributions of the paper can be summarised as below:
 	
 	\item The paper also presents several experiments conducted using the Reality Mining data 
 	set to determine realistic thresholds for when to consider location end times, interim 
-	location on a mobility path and other alike. 
+	location on a mobility path and others alike. 
 	
 	\item The previous studies have concluded that typical users spend 85\% of their time in
 	3 to 4 locations. The paper sheds light on user behaviour and patterns during the 
@@ -64,7 +64,7 @@ The Mobility Profiler Framework consists of the following phases:
 	support criteria, i.e. for every subsequent pair of cell clusters in a sequence, the 
 	former one should be a neighbour of the latter one in the cell-cluster topology graph. 
 	
-	\item Post Processing: The extracted personal mobility patterns are hen used to generate
+	\item Post Processing: The extracted personal mobility patterns are then used to generate
 	cellphone user profiles. 
 	 
 \end{itemize}
@@ -88,14 +88,14 @@ The paper presents several interesting results summarised as below:
 	minimum switching threshold should be 3. 
 	
 	\item Further, experiments were performed to discover patterns for generating both global
-	and personal frequent patterns. It was found out the fairly obvious result that frequency 
-	of mobility paths is inversely correlated with the path-length. 
+	and personal frequent patterns. It was found out that frequency 	of mobility paths is inversely
+	correlated with the path-length. 
 	
 \end{itemize}
 
 \subsection*{Discussion}
-A single may cell encompass several points of interests which are masked by the resolution 
-offered by logging only the network tower ID which covers a large area. As a result the thresholds 
+A single cell may encompass several points of interests which are masked by the resolution 
+offered by logging only the network tower ID which covers a large area. As a result, the thresholds 
 presented in the paper may not hold in practicality which consists of user mobility characterised 
 by short movements and stay times. It would be interesting to implement and analyse, how these
 parameters change when it is applied to a dataset consisting of GPS logs mapped at a high

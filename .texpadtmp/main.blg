@@ -7,45 +7,46 @@ Warning--empty year in DBLP:conf/wowmom/BayirDE09
 Warning--empty title in conf/europar/PetzoldBTU06
 Warning--empty booktitle in Shokri:2015:PDL:2810103.2813687
 Warning--empty booktitle in Zheng:2008:UMB:1409635.1409677
-You've used 5 entries,
+Warning--empty year in 4511454
+You've used 6 entries,
             2118 wiz_defined-function locations,
-            527 strings with 4608 characters,
-and the built_in function-call counts, 1609 in all, are:
-= -- 134
-> -- 105
+            531 strings with 4802 characters,
+and the built_in function-call counts, 1975 in all, are:
+= -- 162
+> -- 133
 < -- 1
-+ -- 41
-- -- 36
-* -- 111
-:= -- 283
-add.period$ -- 15
-call.type$ -- 5
-change.case$ -- 32
++ -- 52
+- -- 46
+* -- 139
+:= -- 345
+add.period$ -- 18
+call.type$ -- 6
+change.case$ -- 40
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 64
-empty$ -- 126
-format.name$ -- 36
-if$ -- 325
+cite$ -- 11
+duplicate$ -- 78
+empty$ -- 154
+format.name$ -- 46
+if$ -- 398
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 5
-newline$ -- 27
-num.names$ -- 10
-pop$ -- 49
+int.to.str$ -- 6
+missing$ -- 6
+newline$ -- 32
+num.names$ -- 12
+pop$ -- 63
 preamble$ -- 1
-purify$ -- 28
+purify$ -- 35
 quote$ -- 0
-skip$ -- 36
+skip$ -- 42
 stack$ -- 0
-substring$ -- 25
-swap$ -- 8
+substring$ -- 30
+swap$ -- 10
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
-warning$ -- 4
-while$ -- 10
-width$ -- 6
-write$ -- 51
-(There were 4 warnings)
+type$ -- 24
+warning$ -- 5
+while$ -- 12
+width$ -- 7
+write$ -- 60
+(There were 5 warnings)
