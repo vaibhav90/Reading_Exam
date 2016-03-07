@@ -1,4 +1,37 @@
 \newpage
 \section{Motivation} \label{motivation}
+In recent years we have witnessed a proliferation of mobile devices with global positioning 
+(GPS) functionality and internet connectivity. This has led to a rapid emergence and a notable 
+progress in the development of Location-based Service (LBS). The typical examples of LBS
+include automotive traffic monitoring, network resource allocation, location based 
+targeted advertisements and social networking. A large amount of user data is collected by these 
+companies which goes into training user specific learning models to predict user mobility and
+behavioural patterns. Although LBS offer valuable services, revealing personal location data to
+potentially untrustworthy service providers raises several privacy concerns.\newline
 
-Mobility prediction is at the heart of my research subject. More specifically, the main goal concerns how to predict future locations of humans from their mobility traces. A wide number of techniques may be used to achieve it. Consequently, to gain a better overview of them, a better understanding of their accuracy and their complexity, I would like to focus the reading exam on these techniques. Since mobility prediction uses geolocated data and that mobility prediction must include security, I have also chosen a paper about security related to geolocated data. This work will be very helpful for my research.
+The heart of this thesis lies in augment the current mobility prediction learning frameworks in order
+to incorporate privacy awareness as a key paradigm. Meanwhile researchers today, use cryptographic
+techniques and Location Privacy Preserving Mechanisms (LPPM) for privacy preservation which are 
+computationally complex and does not facilitate collaborative learning. We will also explore 
+distributed means of computing user independent learning models in realtime maintaining the 
+utility-privacy space. According to recent surveys, 55\% of LBS users have shown concern towards 
+loss of their location privacy and about 50\% of U.S. residents who have a profile on social 
+networking sites are concerned about their privacy. It is clear that the success of LBS depends on 
+the location privacy in the near future.\newline
+
+Since the major component of this research lies in a privacy aware mobility prediction framework, we
+limit the literature survey to these two critical topics, mobility prediction and privacy aware 
+computation. Firstly, it is important to understand to what extent, human mobility is predictable. 
+To this end, we review a classical paper which provides insights into human mobility and the 
+prediction limits. Once the GPS data is collected, it is necessary to understand how to extract 
+the mobility patterns of individuals. We perform a thorough research in this area and review two
+papers which highlight how to discover mobility patterns and user profiles from raw GPS logs. Next, 
+we review literature related to existing privacy preserving mobility prediction models. In this
+area we present an article which depicts a technique to preserve location privacy maintaining the 
+quality of services offered by the LBS. We highlight several limitations of the method explained. 
+Finally, we survey machine learning techniques which can be utilised to construct user mobility 
+models. In this area, we review a paper which presents an novel architecture of privacy-preserving 
+distributed learning approach.  
+
+
+

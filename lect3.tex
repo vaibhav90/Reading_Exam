@@ -1,93 +1,102 @@
 \newpage
-\section{Privacy-Preserving Deep Learning~\cite{Shokri:2015:PDL:2810103.2813687}}~\label{lect3}
+\section{Discovering SpatioTemporal Mobility Profiles of Cellphone Users~\cite{DBLP:conf/wowmom/BayirDE09}} \label{lect3}
 
-\subsection{Summary} \label{lect3-sum}
+\subsection*{Summary}
 
-\subsubsection{Context}
+\subsubsection*{Context}
 
-Today, commercial companies such as Facebook, Google and Apple collect a large amount of user data to learn 
-about user preferences and suggest recommendations. This requires a large amount of data related to the users, 
-a considerable part of which is highly sensitive personal information. This data is used to formulate user specific 
-models, generation of which is aided by techniques such as deep learning. On the other hand, biomedical and 
-clinical researchers cannot attain benefits from these techniques as not permitted to share their data. As 
-a result privacy and confidentiality restrictions reduce the utility. 
+In order to develop applications, related to context-based search and advertising, inherent
+in Location Based Services, it is trivial to understand the mobility patterns and profiles of
+users. These patterns need to be extracted from the raw GPS traces which are available from the 
+cellphones. Different users have distinct behaviours which influence their mobility patterns as 
+a result it is crucial to discover these factors which affect the mobility path information
+retrieval. This paper focuses on discovering the spatiotemporal mobility patterns and mobility
+profiles from cell phone location logs.  
+   
 
-\subsubsection{Problem}
+\subsubsection*{Problem}
 
-Deep learning presents a interesting avenue to extract highly accurate models by deriving complex features from high
-dimensional data. Although, such accurate models can give rise to high utility applications they present serious
-privacy issues due to user data stored in the servers, which is also used for monetary gains by these companies. As 
-a result, there is a need to alter these model generation techniques to offer a satisfactory point in the utility/
-privacy tradeoff space. 
+Today, the LBS providers continuously monitor their users and log their location information, in 
+the form of GPS coordinates. However, extracting meaningful information out of these raw traces is
+a challenge due to the anomalies caused while tracking and user specific behaviour. On the 
+contrary to the existing works which are restricted to small scale environments in order to 
+study human mobility, this paper puts forth a framework "Mobility Profiler", for discovering user
+mobility patterns user profiles at a city wide level using cellular networks.  
 
-\subsubsection{Contributions}
+\subsection*{Contributions}
 
-The authors device a distributed deep learning technique that collaborates with multiple participants to learn a 
-neural-network model on their own inputs, without explicitly sharing these inputs. The key contributions can be 
-summarised as follows: 
+The main contributions of the paper can be summarised as below:
 
 \begin{itemize}
-	\item A selective parameter update model: During training iterations, some attributes contribute largely
-	towards a neural networks objective function as compared to others. This model selects parameters whose
-	current value is far away from the local optima. Only these parameters are updated collaboratively to 
-	undergo bigger changes in subsequent iterations. 
 	
-	\item Distributed collaborative learning: After every iteration of local training, participants
-	asynchronously share the computed gradients with each other. Therefore benefiting from each others
-	training data without actually sharing it. Thus preserving the privacy of the participants.  
+	\item The paper introduces formal definitions for the concepts of mobility path, mobility 
+	pattern and mobility profile and the factors influencing each. 
+	
+	\item The authors design and implement the complete framework of Mobility Profiler to 
+	discover mobility profiles from raw data. 
+	
+	\item The paper also presents several experiments conducted using the Reality Mining data 
+	set to determine realistic thresholds for when to consider location end times, interim 
+	location on a mobility path and other alike. 
+	
+	\item The previous studies have concluded that typical users spend 85\% of their time in
+	3 to 4 locations. The paper sheds light on user behaviour and patterns during the 
+	remaining 15\% of the time. 
+	
+	 
+\end{itemize}
+
+\subsubsection*{Approach}
+
+The Mobility Profiler Framework consists of the following phases: 
+
+\begin{itemize}
+
+	\item Path Construction: Here, an ordered set of cell tower IDs corresponding to 
+	user's travel path is constructed. Cell clustering is further employed to eliminate 
+	oscillating cell towers and replace them with their corresponding clusters. 
+	
+	\item Topology Construction: The extracted travel paths of cell clusters are used to 
+	construct topology of user movements. 
+	
+	\item Pattern Discovery: Here, the frequent mobility patterns of each user are discovered. 
+	This step is carried out by employing the topology information and a string matching 
+	support criteria, i.e. for every subsequent pair of cell clusters in a sequence, the 
+	former one should be a neighbour of the latter one in the cell-cluster topology graph. 
+	
+	\item Post Processing: The extracted personal mobility patterns are hen used to generate
+	cellphone user profiles. 
+	 
+\end{itemize}
+
+
+\subsubsection*{Results}
+The paper presents several interesting results summarised as below:
+
+\begin{itemize}
+
+	\item The authors find that the average duration spent in a cell is 10~min where it is 
+	defined as the duration between the cell end time and the cell start time. The average
+	cell transition time was also found to be 10~min where it is defined as the time duration
+	between the subsequent cell start time and the current cell end time. These values were 
+	experimentally found by analysing the ratio of cell span duration and cell span transitions,
+	smaller than predefined time values in the experiment phase.  
+	
+	\item In order to determine the right cluster in the case of oscillations, it is important
+	to determine the minimum switching count. It was analytically found out that in order to 
+	distinguish between oscillations due to user mobility and cell tower oscillations the 
+	minimum switching threshold should be 3. 
+	
+	\item Further, experiments were performed to discover patterns for generating both global
+	and personal frequent patterns. It was found out the fairly obvious result that frequency 
+	of mobility paths is inversely correlated with the path-length. 
 	
 \end{itemize}
 
-\paragraph{Approach}
-
-The system architecture consists of a local training database for performing the training locally
-and parameter server which can be an actual server or a distributed system for running the parameter 
-and gradient exchange protocol. 
-
-\begin{itemize}
-	\item Each participant maintains a local vector of neural network parameters. A training iteration
-	is performed over the local training data. Next, the participant downloads the parameters uploaded 
-	at the server and computes the gradient of each parameter. 
-	
-	\item The parameter server initialises the parameter vector and handles the participants upload and 
-	download requests. 
-	
-	\item Distributed Stochastic Gradient Descent: While training alone, every participant is more likely 
-	to converge to a local optima. However using a distributed approach in learning, by using parameters
-	trained on different datasets, can help to escape local optima resulting in more accurate models. 
-	
-	\item Parameter exchange protocol: The authors assume round robin to run the gradient decent 
-	sequentially. Every participant downloads the most updated parameters from the server, runs local 
-	training and uploads selected gradients and the next participant follows in the fixed order. 
-\end{itemize}
-
-\subsection{Results and Discussion} \label{lect3-disc}
-
-The authors implemented distributed gradient decent with round robin, random order, and asynchronous parameter
-exchange protocols. The results were compared with two scenarios, running a gradient descent on the entire dataset 
-and the other is standalone gradient descent where participants train only on their own training data without 
-collaboration. The evaluation was performed 	on two major datasets used as benchmarks in deep-learning. 
-The key results can be summarised as below:
-
-\begin{itemize}
-	\item The authors achieved the same accuracy as simple stochastic gradient decent as compared to gradient 
-	descent ran by sharing only a small fraction of gradients at each iteration step. 	
-	
-	\item The results obtained show that even at sharing only 1 percent of parameters, results in higher accuracy
-	than standalone or centralised learning. 
-	
-	\item Distributed gradient descent using round robin parameter resulted in the highest accuracy and was discovered 
-	that round robin protocol is suitable for scenarios where all participants have similar computational capacity. 
-	
-	\item It was also observed that number of participants has a lower impact on accuracy than the percentage of shared parameters. 
-	Assuming each participant shares his largest gradients with other participants.
-	
-	\item The system computes the differential privacy of each parameter and than decides which one to share with other 
-	participants resulting in lower privacy leakage. Further, the authors find the sensitivity index for each parameter, 	
-	quantifying the amount of random noise which needs to be added to achieve a certain level of differential privacy. 
-	
-\end{itemize}
-
-The experiments conducted in the paper are based on supervised learning, it will be interesting to evaluate the accuracy 
-of distributed stochastic gradient descent on unsupervised learning approaches. 
-
+\subsection*{Discussion}
+A single may cell encompass several points of interests which are masked by the resolution 
+offered by logging only the network tower ID which covers a large area. As a result the thresholds 
+presented in the paper may not hold in practicality which consists of user mobility characterised 
+by short movements and stay times. It would be interesting to implement and analyse, how these
+parameters change when it is applied to a dataset consisting of GPS logs mapped at a high
+frequency. 
