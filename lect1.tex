@@ -5,50 +5,51 @@
 
 Human behaviour is characterised by spontaneity, randomness and change. This paper puts
 forth an important contribution in stating to what extent human mobility is predictable. 
-The authors identify a metric, "Entropy" as a means to measure the potential predictability
-in user mobility. Although, the paper might seem trivial, it can be seen as a base research
-in order to make explicit predictions on user whereabouts. 
+The authors identify a metric called entropy as a means to measure the potential predictability
+in user mobility. Although, the paper might seem trivial, it can be seen as a seminal paper,
+when it comes to make explicit predictions on user whereabouts. 
 
 \subsubsection*{Problem}
 
-The authors take an interesting approach to model human activity which is not stochastic 
-based. There exist several probabilistic based models, as a result it is necessary to 
+The authors take an interesting approach to model human activity that is not stochastic 
+based. There exist several probabilistic-based models, as a result it is necessary to 
 know the degree of randomness in human behaviour and the extent to which human mobility 
 is predictable. Furthermore, it is important to know the bounds of predictability 
 characterised by the mobility entropy, travel distance, frequency of visits, time spent 
 at a particular location and heterogeneity of the visitation patterns. This papers fills this
 void by experimentally analysing the above bounds and concluding that human mobility is 
-characterised by high regularity and this is predictable.          
+characterised by high regularity and is therefore predictable in most cases.          
 
-\subsection*{Contributions}
+\subsubsection*{Contributions}
 
-The paper dismisses many of the common assumptions associated with human mobility prediction
-by experimental evaluation of several mobility datasets. Here lies the major contribution of 
-the paper as it established bounds for various aspects of prediction. 
+The paper dismisses many of the common assumptions associated with human mobility prediction such as
+higher the entropy of user movement lower is the prediction accuracy, larger the distance
+travelled by the user, lower is the prediction accuracy. The authors experimentally evaluate 
+several mobility datasets and established bounds for various aspects of prediction.
 
 \begin{itemize}
 
 	\item The article presents a technique to measure the entropy associated with user movement. 
 	The entropies can be classified in to random entropy (number of distinct locations visited by the user), 
 	temporal-uncorrelated entropy (characterises the heterogeneity of visitation patterns) and the actual
-	entropy (accounts the order in which the nodes are visited). This distinction aids to arrive at the 
+	entropy (accounts the order in which nodes are visited). This distinction aids to arrive at the 
 	conclusion that user movement can be predicted irrespective of the entropy thus dismissing the 
 	general assumption that only lower entropy implies higher predictability. 
 		
 	\item The authors evaluate the Fano's inequality bound on predictability when a user with a given entropy 
-	moves between N locations. It was discovered that, despite of the apparent randomness of the individual
-	trajectories there exists a high degree of potential predictability in user movement. 
+	moves between N locations. It was discovered that, in spite of the apparent randomness of individual
+	trajectories, there exists a high degree of potential predictability in user movement. 
 	
-	\item The analysis also led to a conclusion that, the predictability across a large user base is insignificant 
-	and varies from person to person. Further, it was also found that, users covering larger distances on regular 
-	basis are just as predictable as users commuting in a small area. 
+	\item The analysis also led to the conclusion that, predictability across a large user base is insignificant 
+	and varies from person to person. Furthermore, it was also found that, users covering larger distances on a 
+	regular basis are just as predictable as users commuting in a small area. 
 	
 	\item Similar results were obtained when experiments were performed on diverse demographics of varying ages and 
-	genders, i.e. only insignificant variations were found in regularity. This concludes that regularity and thus 
+	genders, i.e., only insignificant variations were found in regularity. This concludes that regularity and thus 
 	predictability is not imposed by demographic factors, but instead by intrinsic human activities. 
 	
 	\item The combination of the empirically determined user entropy by the authors and Fano's inequality leads 
-	to a potential 93\% average predictability in user mobility. 
+	to a potential 93\% average predictability in user mobility.
 	
 \end{itemize}
 
@@ -56,21 +57,21 @@ the paper as it established bounds for various aspects of prediction.
 
 A dataset representing the call patterns of 10~million mobile phone users was used containing the routing tower 
 location. The data was filtered to have only the users with a sufficient calling frequency and high 
-movement which was further characterised by individual call/motion activity. This data was processed to construct 
+movement that was further characterised by individual call/motion activity. This data was processed to construct 
 a time series for each user to determine their entropy, movement regularity and dependence on the demographic
 and population density. 
  
-\subsection*{Discussion}
+\subsubsection*{Discussion}
 \begin{itemize}
 
-
-\item The used dataset was collected in a high income country where having a 93\% potential predictability
+\item The used dataset was collected in a high income country, where having a 93\% potential predictability
 in user mobility is acceptable despite very large differences in travel distances due to the regularity 
-and availability of transportation modes. However, it will be interesting to characterise similar parameters 
-in the low income and densely populated countries which face much more extreme conditions
-so as to generalise the findings.  
+and availability of transportation modes. However, it would be interesting to characterise similar parameters 
+in the low income and densely populated countries that face much more extreme conditions so as to generalise the
+findings.  
 
 \item Although the authors calculated the bounds on predictability by defining entropy and movement regularity, 
 the paper did not show how close to the maximum potential predictability, the accuracy of actual algorithms can 
-come in practice. 
+come in practice, i.e. to fill this gap by measuring the maximum possible predictability computed theoretically
+and the actual accuracy calculated by the prediction algorithms such as Markov chains.   
 \end{itemize}

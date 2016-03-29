@@ -1,5 +1,5 @@
 \contentsline {section}{\numberline {1}Limits of Predictability in Human Mobility\nobreakspace {}\cite {Song1018}}{4}{section.1}
-\contentsline {section}{\numberline {2}Understanding Mobility Based on GPS Data\nobreakspace {}\cite {Zheng:2008:UMB:1409635.1409677}}{6}{section.2}
-\contentsline {section}{\numberline {3}Discovering SpatioTemporal Mobility Profiles of Cellphone Users\nobreakspace {}\cite {DBLP:conf/wowmom/BayirDE09}}{8}{section.3}
-\contentsline {section}{\numberline {4}Hiding Stars with Fireworks: Location Privacy through Camouflage\nobreakspace {}\cite {conf/europar/PetzoldBTU06}}{10}{section.4}
+\contentsline {section}{\numberline {2}Understanding Mobility based on GPS Data\nobreakspace {}\cite {Zheng:2008:UMB:1409635.1409677}}{6}{section.2}
+\contentsline {section}{\numberline {3}Discovering SpatioTemporal Mobility Profiles of Cellphone Users\nobreakspace {}\cite {5282489}}{8}{section.3}
+\contentsline {section}{\numberline {4}Hiding Stars with Fireworks: Location Privacy through Camouflage\nobreakspace {}\cite {Meyerowitz:2009:HSF:1614320.1614358}}{10}{section.4}
 \contentsline {section}{\numberline {5}Privacy-Preserving Deep Learning\nobreakspace {}\cite {Shokri:2015:PDL:2810103.2813687}}{12}{section.5}

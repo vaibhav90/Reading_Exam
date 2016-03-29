@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.21)  18 MAR 2016 11:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.21)  29 MAR 2016 14:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -174,22 +174,22 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 ) (/Users/admin/Desktop/Reading_Exam/.texpadtmp/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 \AtBeginShipoutBox=\box26
-Package hyperref Info: Link coloring OFF on input line 11.
+Package hyperref Info: Link coloring OFF on input line 13.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -197,9 +197,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count101
 )
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
+LaTeX Info: Redefining \ref on input line 13.
+LaTeX Info: Redefining \pageref on input line 13.
+LaTeX Info: Redefining \nameref on input line 13.
  (/Users/admin/Desktop/Reading_Exam/.texpadtmp/main.out) (/Users/admin/Desktop/Reading_Exam/.texpadtmp/main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -241,7 +241,7 @@ LaTeX Info: Redefining \nameref on input line 11.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 11.
+(lastpage)             ! on input line 13.
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count102
@@ -267,23 +267,16 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 18.
+(Font)              <14.4> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 18.
+(Font)              <7> on input line 20.
  [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/admin/Desktop/Reading_Exam/.texpadtmp/main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- (./motivation.tex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2]
+ (./motivation.tex [2]
 Underfull \hbox (badness 10000) in paragraph at lines 3--11
 
  []
@@ -298,12 +291,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--22
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 2.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 32.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 32.
  [4]) (./lect2.tex [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -312,10 +305,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 <images/tm1.pdf, id=80, 563.10374pt x 132.495pt>
 File: images/tm1.pdf Graphic file (type pdf)
  <use images/tm1.pdf>
-Package pdftex.def Info: images/tm1.pdf used on input line 28.
+Package pdftex.def Info: images/tm1.pdf used on input line 26.
 (pdftex.def)             Requested size: 227.62206pt x 53.55707pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--60
+Underfull \hbox (badness 10000) in paragraph at lines 52--56
 
  []
 
@@ -341,28 +334,28 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [12]) [13] (/Users/admin/Desktop/Reading_Exam/.texpadtmp/main.bbl) 
 AED: lastpage setting LastPage
 [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
  (/Users/admin/Desktop/Reading_Exam/.texpadtmp/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 32AA78EF586F95A5B44D6F41B543D0EF;697.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
  ) 
 Here is how much of TeX's memory you used:
- 5801 strings out of 493089
- 86229 string characters out of 6134842
- 179224 words of memory out of 5000000
+ 5795 strings out of 493089
+ 86132 string characters out of 6134842
+ 179222 words of memory out of 5000000
  9165 multiletter control sequences out of 15000+600000
- 6974 words of font info for 25 fonts, out of 8000000 for 9000
+ 6667 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,10n,43p,241b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,11n,43p,244b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on /Users/admin/Desktop/Reading_Exam/.texpadtmp/main.pdf (14 pages, 156711 bytes).
+Output written on /Users/admin/Desktop/Reading_Exam/.texpadtmp/main.pdf (14 pages, 149848 bytes).
 PDF statistics:
- 221 PDF objects out of 1000 (max. 8388607)
- 194 compressed objects within 2 object streams
- 74 named destinations out of 1000 (max. 500000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
+ 68 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,33 +1,34 @@
 \begin{thebibliography}{1}
 
-\bibitem{DBLP:conf/wowmom/BayirDE09}
-M.~A. Bayir, M.~Demirbas, and N.~Eagle.
-\newblock Discovering spatiotemporal mobility profiles of cellphone users.
-\newblock In {\em WOWMOM 2009, Greece, June}.
-
-\bibitem{conf/europar/PetzoldBTU06}
-J.~Petzold, F.~Bagci, W.~Trumler, and T.~Ungerer.
-\newblock In {\em Euro-Par}, volume 4128, 2006.
-
-\bibitem{Shokri:2015:PDL:2810103.2813687}
-R.~Shokri and V.~Shmatikov.
-\newblock Privacy-preserving deep learning.
-\newblock CCS '15, 2015.
-
 \bibitem{Song1018}
-C.~Song, Z.~Qu, N.~Blumm, and A.-L. Barab{\'a}si.
+Chaoming Song, Zehui Qu, Nicholas Blumm, and Albert-L{\'a}szl{\'o}
+  Barab{\'a}si.
 \newblock Limits of predictability in human mobility.
 \newblock {\em Science}, 2010.
 
 \bibitem{Zheng:2008:UMB:1409635.1409677}
-Y.~Zheng, Q.~Li, Y.~Chen, X.~Xie, and W.-Y. Ma.
+Yu~Zheng, Quannan Li, Yukun Chen, Xing Xie, and Wei-Ying Ma.
 \newblock Understanding mobility based on gps data.
-\newblock UbiComp '08. ACM, 2008.
+\newblock UbiComp '08.
+
+\bibitem{5282489}
+M.~A. Bayir, M.~Demirbas, and N.~Eagle.
+\newblock Discovering spatiotemporal mobility profiles of cellphone users.
+\newblock WoWMoM '09.
+
+\bibitem{Meyerowitz:2009:HSF:1614320.1614358}
+Joseph Meyerowitz and Romit Roy~Choudhury.
+\newblock Hiding stars with fireworks: Location privacy through camouflage.
+\newblock MobiCom '09.
+
+\bibitem{Shokri:2015:PDL:2810103.2813687}
+Reza Shokri and Vitaly Shmatikov.
+\newblock Privacy-preserving deep learning.
+\newblock CCS '15.
 
 \bibitem{4511454}
 Y.~Zheng, L.~Wang, R.~Zhang, X.~Xie, and W.~Y. Ma.
 \newblock Geolife: Managing and understanding your past life over maps.
-\newblock In {\em Mobile Data Management, 2008. MDM '08. 9th International
-  Conference on}.
+\newblock Mobile Data Management (MDM '08).
 
 \end{thebibliography}

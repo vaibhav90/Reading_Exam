@@ -1,8 +1,6 @@
 \newpage
 \section{Hiding Stars with Fireworks:
-Location Privacy through Camouflage~\cite{conf/europar/PetzoldBTU06}}\label{lect4}
-
-\subsection*{Summary}
+Location Privacy through Camouflage~\cite{Meyerowitz:2009:HSF:1614320.1614358}}\label{lect4}
 
 \subsubsection*{Context}
 
@@ -10,7 +8,7 @@ There has been a rapid proliferation of Location Based Services (LBS) in recent
 years due to ubiquitous wireless connectivity and GPS modules integrated with 
 smart phones. These LBS rely on accurate, continuous and realtime streaming of 
 location data. However, revealing this information to service providers poses a 
-significant privacy risk. In this paper, the authors device a method to preserve
+significant privacy risk. In this paper, the authors devise a method to preserve
 user privacy without trading off the quality of services offered by the LBS. 
 
 \subsubsection*{Problem}
@@ -22,9 +20,9 @@ increased delay in reporting user location or temporarily preventing the user fr
 reporting locations completely. This leads to user data being less useful after
 enabling privacy protection. As a result a framework is needed which can protect
 the user against location tracking by the service providers at the same time
-offer high quality services. 
+offering high quality services. 
   
-\subsection*{Contributions}
+\subsubsection*{Contributions}
 
 \begin{enumerate}
 	\item The paper proposes CacheCloak, which acts as an intermediary server 
@@ -47,7 +45,7 @@ offer high quality services.
 	every possible way the user might go considering different speeds and 
 	directions. 
 	
-	\item The paper proposes a quantitative measure of privacy based on 
+	\item The paper proposes a quantitative measure of privacy, based on 
 	the attackers ability or inability to track the user over time. 
 	
 	\item Finally the authors discuss a practical implementation of a distributed
@@ -59,6 +57,7 @@ offer high quality services.
 \subsubsection*{Approach}
 
 \begin{enumerate}
+
 	\item The authors carry out a trace-based simulation in order to have realistic operating
 	 conditions. A city map was loaded into a simulator with virtual drivers following physical laws
 	 and defined speed limits, with random placement of vehicles on the map as a bootstrapping
@@ -76,31 +75,28 @@ offer high quality services.
 	 LBS will be triggered and corresponding results will be cached. 
 	 
 	 \item Based on a formulated attacker model, the authors evaluate and quantify the location 
-	 privacy based on entropy which provides a measure of attacker's uncertainty. 
-	
-	
+	 privacy based on the entropy of user movement which provides a measure of attacker's uncertainty. 
+	 
+	 \item The results show that CacheCloak can provide users with multiple bits of entropy within 
+	 a maximum of 10 minutes, which can be achieved even in sparse populations where the space time 
+	 intersections are rare for two users paths to intersect to different times.  
+		
 \end{enumerate}
 
-\subsubsection*{Results}
-
-The results show that CacheCloak can provide users with multiple bits
-of entropy within a maximum of 10 minutes. The evaluations also show that
-such entropies can be achieved even in sparse populations. 
-
-\subsection*{Discussion} 
+\subsubsection*{Discussion} 
 
 \begin{enumerate}
 
-	\item The paper also discusses a distributed implementation of CacheCloak in which the devices 
-	will have to perform their own mobility predictions. It will be interesting to investigate the 
-	feasibility of the diffusion schemes and the iterative Markov model and quantify the cost of 
-	incorrect predictions. As incorrect predictions only lead to communication costs while running 
-	it on the CacheCloak Server, now it will also result in computational costs. 
+	\item In addition to a centralised implementation of CacheCloak, the paper also discusses a distributed
+	version, in which the devices will have to perform their own mobility predictions. It would
+	be interesting to investigate the feasibility of the diffusion schemes and the iterative Markov model and
+	quantify the cost of incorrect predictions. As incorrect predictions only lead to communication costs
+	while running it on the CacheCloak Server, now it would also result in computational costs. 
 	
-	\item In the paper, the the authors primarily investigate the application of CacheCloak to 
+	\item In the paper, the authors primarily investigate the application of CacheCloak to 
 	vehicular mobility, more specifically, cars. However, a considerable proportion of the 
-	population use mixed modes of transportation. Their mobility behaviour involves bus/train/
-	walking	or all of them, in which case the predictions are not so straightforward. As a result 
+	population use mixed modes of transportation. Their mobility behaviour involves bus/train/walking	
+	or all of them, in which case the predictions are not so straightforward. As a result 
 	some alterations in the proposed framework needs to be made to have a practical viability. 
 	
 \end{enumerate}
