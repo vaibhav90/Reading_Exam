@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: /Users/admin/Desktop/Reading_Exam/.texpadtmp/main.aux
 The style file: unsrt.bst
-Illegal, another \bibstyle command---line 44 of file /Users/admin/Desktop/Reading_Exam/.texpadtmp/main.aux
+Illegal, another \bibstyle command---line 43 of file /Users/admin/Desktop/Reading_Exam/.texpadtmp/main.aux
  : \bibstyle
  :          {abbrv}
 I'm skipping whatever remains of this command
@@ -15,47 +15,45 @@ Warning--empty booktitle in Meyerowitz:2009:HSF:1614320.1614358
 Warning--empty year in Meyerowitz:2009:HSF:1614320.1614358
 Warning--empty booktitle in Shokri:2015:PDL:2810103.2813687
 Warning--empty year in Shokri:2015:PDL:2810103.2813687
-Warning--empty booktitle in 4511454
-Warning--empty year in 4511454
-You've used 6 entries,
+You've used 5 entries,
             1791 wiz_defined-function locations,
-            474 strings with 4546 characters,
-and the built_in function-call counts, 1164 in all, are:
-= -- 67
-> -- 75
+            470 strings with 4389 characters,
+and the built_in function-call counts, 949 in all, are:
+= -- 56
+> -- 58
 < -- 0
-+ -- 27
-- -- 21
-* -- 69
-:= -- 193
-add.period$ -- 18
-call.type$ -- 6
-change.case$ -- 6
++ -- 21
+- -- 16
+* -- 54
+:= -- 158
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 63
-empty$ -- 130
-format.name$ -- 21
-if$ -- 251
+cite$ -- 13
+duplicate$ -- 52
+empty$ -- 107
+format.name$ -- 16
+if$ -- 205
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 6
-newline$ -- 33
-num.names$ -- 6
-pop$ -- 38
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 28
+num.names$ -- 5
+pop$ -- 31
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 25
+skip$ -- 21
 stack$ -- 0
 substring$ -- 0
-swap$ -- 6
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 10
-while$ -- 6
-width$ -- 7
-write$ -- 57
+warning$ -- 8
+while$ -- 5
+width$ -- 6
+write$ -- 48
 (There was 1 error message)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.21)  29 MAR 2016 14:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.21)  11 MAY 2016 11:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -267,9 +267,9 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 20.
+(Font)              <14.4> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 20.
+(Font)              <7> on input line 21.
  [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/admin/Desktop/Reading_Exam/.texpadtmp/main.toc)
@@ -302,7 +302,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 2.
 
-<images/tm1.pdf, id=80, 563.10374pt x 132.495pt>
+<images/tm1.pdf, id=78, 563.10374pt x 132.495pt>
 File: images/tm1.pdf Graphic file (type pdf)
  <use images/tm1.pdf>
 Package pdftex.def Info: images/tm1.pdf used on input line 26.
@@ -334,28 +334,28 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [12]) [13] (/Users/admin/Desktop/Reading_Exam/.texpadtmp/main.bbl) 
 AED: lastpage setting LastPage
 [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
  (/Users/admin/Desktop/Reading_Exam/.texpadtmp/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 32AA78EF586F95A5B44D6F41B543D0EF;697.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
  ) 
 Here is how much of TeX's memory you used:
- 5795 strings out of 493089
- 86132 string characters out of 6134842
- 179222 words of memory out of 5000000
+ 5794 strings out of 493089
+ 86128 string characters out of 6134842
+ 179193 words of memory out of 5000000
  9165 multiletter control sequences out of 15000+600000
- 6667 words of font info for 24 fonts, out of 8000000 for 9000
+ 6966 words of font info for 25 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,11n,43p,244b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on /Users/admin/Desktop/Reading_Exam/.texpadtmp/main.pdf (14 pages, 149848 bytes).
+Output written on /Users/admin/Desktop/Reading_Exam/.texpadtmp/main.pdf (14 pages, 153067 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
- 68 named destinations out of 1000 (max. 500000)
+ 211 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 67 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
